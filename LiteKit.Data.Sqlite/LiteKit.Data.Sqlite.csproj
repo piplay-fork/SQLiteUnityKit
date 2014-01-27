@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3FEDBC8A-CD61-440C-90E7-093E0182B4C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LiteKit.Data.Sqlite</RootNamespace>
+    <AssemblyName>LiteKit.Data.Sqlite</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\LiteKit.Data.Sqlite\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\LiteKit.Data.Sqlite\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\LiteKit.Data\LiteKit.Data.csproj">
+      <Project>{03BE6DCD-072E-478D-9911-5D245166A64F}</Project>
+      <Name>LiteKit.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SqliteConnection.cs" />
+    <Compile Include="SqliteCommand.cs" />
+    <Compile Include="SqliteException.cs" />
+    <Compile Include="SqliteDataReader.cs" />
+    <Compile Include="SqliteDbDataParameter.cs" />
+    <Compile Include="SqliteDataParameterCollection.cs" />
+    <Compile Include="UnsafeNativeMethods.cs" />
+  </ItemGroup>
+</Project>

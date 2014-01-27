@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{03BE6DCD-072E-478D-9911-5D245166A64F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LiteKit.Data</RootNamespace>
+    <AssemblyName>LiteKit.Data</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\LiteKit.Data\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\LiteKit.Data\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="IDbConnection.cs" />
+    <Compile Include="ConnectionState.cs" />
+    <Compile Include="IDbTransaction.cs" />
+    <Compile Include="IsolationLevel.cs" />
+    <Compile Include="IDbCommand.cs" />
+    <Compile Include="CommandType.cs" />
+    <Compile Include="IDataParameterCollection.cs" />
+    <Compile Include="UpdateRowSource.cs" />
+    <Compile Include="IDbDataParameter.cs" />
+    <Compile Include="IDataParameter.cs" />
+    <Compile Include="DbType.cs" />
+    <Compile Include="ParameterDirection.cs" />
+    <Compile Include="DataRowVersion.cs" />
+    <Compile Include="IDataReader.cs" />
+    <Compile Include="IDataRecord.cs" />
+    <Compile Include="DataTable.cs" />
+    <Compile Include="CommandBehavior.cs" />
+  </ItemGroup>
+</Project>

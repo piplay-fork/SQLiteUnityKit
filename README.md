@@ -6,6 +6,12 @@ Framework to connect to SQLite database from Unity for iOS, Android, MAC and Win
 <b>***** please don't use this code for sell an asset *****</b>
 
 ##change log
+###v 2.0 changes:
+* Refactored to use System.Data-like structures. This should help with existing DB code
+* Added unit tests
+* Removed Unity-specific features, you'll need to copy DB files again
+* TODO: Update this README...
+
 ###v 1.1 changes:
 * Add android support (read below how to do)
 * sqlite libs version for android (v3.3.17) It has been compiled with the android native development kit release 9 and the target arm is ARMv5TE (which should cover most android devices).
@@ -46,6 +52,7 @@ follow this simple steps and you can get full compatibility with android.
  * BLOB support by Jonathan Derrough @ http://jderrough.blogspot.com/
  * modify by Santiago Bustamante @ busta117@gmail.com
  * Android compatibility by Thomas Olsen @ olsen.thomas@gmail.com
+ * System.Data-like interfaces by Eric Laberge @ elaberge@gmail.com
 
 <br/>
 

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteKit.Data", "LiteKit.Data\LiteKit.Data.csproj", "{03BE6DCD-072E-478D-9911-5D245166A64F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteKit.Data.Sqlite", "LiteKit.Data.Sqlite\LiteKit.Data.Sqlite.csproj", "{3FEDBC8A-CD61-440C-90E7-093E0182B4C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{456C9AB2-CA9C-44C8-995A-648EF3122A0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03BE6DCD-072E-478D-9911-5D245166A64F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03BE6DCD-072E-478D-9911-5D245166A64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03BE6DCD-072E-478D-9911-5D245166A64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03BE6DCD-072E-478D-9911-5D245166A64F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FEDBC8A-CD61-440C-90E7-093E0182B4C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FEDBC8A-CD61-440C-90E7-093E0182B4C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FEDBC8A-CD61-440C-90E7-093E0182B4C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FEDBC8A-CD61-440C-90E7-093E0182B4C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{456C9AB2-CA9C-44C8-995A-648EF3122A0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{456C9AB2-CA9C-44C8-995A-648EF3122A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{456C9AB2-CA9C-44C8-995A-648EF3122A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{456C9AB2-CA9C-44C8-995A-648EF3122A0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Tests\Tests.csproj
+	EndGlobalSection
+EndGlobal
