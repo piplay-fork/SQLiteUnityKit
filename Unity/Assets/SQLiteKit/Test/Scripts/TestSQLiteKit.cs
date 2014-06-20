@@ -6,7 +6,10 @@ using UnityEngine;
 
 public class TestSQLiteKit : MonoBehaviour {
 
-	static string _dbFileName = Application.persistentDataPath + "/database.sqlite";
+	[SerializeField]
+	GUIText _guiText;
+
+	string _dbFileName;
 
 	void InsertVal(IDbCommand cmd, object val) {
 		cmd.CommandText = "INSERT INTO Test (val) VALUES (@val);";
@@ -15,10 +18,11 @@ public class TestSQLiteKit : MonoBehaviour {
 		param.Value = val;
 		cmd.Parameters.Add(param);
 		var cnt = cmd.ExecuteNonQuery();
-		Debug.Log ("Inserted Count = " + cnt);
+		_guiText.text += "Inserted Count = " + cnt + "\n";
 	}
 
 	void Start () {
+		_dbFileName = Application.persistentDataPath + "/database.sqlite";
 		if (!File.Exists(_dbFileName)) {
 			SqliteConnection.CreateFile(_dbFileName);
 		}
@@ -27,7 +31,7 @@ public class TestSQLiteKit : MonoBehaviour {
 			using (var cmd = db.CreateCommand()) {
 				cmd.CommandText = "DROP TABLE IF EXISTS Test; CREATE TABLE Test (val);";
 				var cnt = cmd.ExecuteNonQuery();
-				Debug.Log ("Created Table = " + cnt);
+				_guiText.text += "Created Table = " + cnt + "\n";
 			}
 			using (var cmd = db.CreateCommand()) {
 				InsertVal(cmd, 345);
@@ -36,14 +40,14 @@ public class TestSQLiteKit : MonoBehaviour {
 			using (var cmd = db.CreateCommand()) {
 				cmd.CommandText = "SELECT val FROM Test;";
 				var val = cmd.ExecuteScalar();
-				Debug.Log ("Selected val = " + val);
+				_guiText.text += "Selected val = " + val + "\n";
 			}
 			using (var cmd = db.CreateCommand()) {
 				cmd.CommandText = "SELECT val FROM Test;";
 				using (var reader = cmd.ExecuteReader()) {
 					while (reader.Read()) {
 						var val = reader.GetValue(0);
-						Debug.Log ("Selected from Reader val = " + val);
+						_guiText.text += "Selected from Reader val = " + val + "\n";
 					}
 				}
 			}
